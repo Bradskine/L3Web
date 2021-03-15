@@ -1,0 +1,289 @@
+html {
+    background-color:  rgb(40,40,40);
+}
+
+
+body {
+    display: grid;
+    grid-template-rows: 15vh 60vh 25vh;
+    grid-template-columns: auto 8fr;
+    margin: 0;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 1/4;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr 3fr auto;
+    background-color: rgb(255, 0, 0, 1);
+    height: 100%;
+    width: 3vw;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+
+
+.logo {
+    height: 0;
+
+}
+
+.ab {
+    font-size: 0;
+    text-decoration: none;
+    text-decoration-color: red;
+}
+
+
+.wow:hover {
+    width: 20vw;
+}
+
+.wow:hover .ab {
+    font-size: 3vh;
+    transition: font-size 2s, text-decoration 6s;
+    text-decoration: underline;
+    text-decoration-color: black;
+
+}
+
+.wow:hover .logo {
+    width: 8vh;
+    height: 8vh;
+    transition: height 2s;
+}
+
+.wow:hover .grey {
+    width: 0;
+    height: 0;
+    transition: width 1s, height 500s;
+    
+}
+
+
+.grey {
+    width: 3vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    transition: width 1s;
+}
+
+
+
+
+a {
+    color: black;
+    font-size: 3vh;
+}
+
+img.logo {
+    width: 8vh;
+
+}
+
+.header {
+    display: grid;
+    grid-template-columns: 53fr auto 10fr;
+    grid-template-rows:  10vh;
+
+}
+
+img.sCart {
+    height: 10vh;
+}
+
+.but1 {
+    border: none;
+    grid-column: 3;
+    background: none;
+    color: red;
+    text-align: center;
+    align-self: center;
+    font-size: 4vh;
+    transition: font-size 0.12s, color 0.6s, background-color 0.4s;
+    padding: 0;
+    width: 20vw;
+    justify-self: center;
+    border-radius: 6px;
+}
+
+
+.but1:hover {
+    font-size: 5vh;
+    color: black;
+    background-color: red;
+}
+
+
+
+.dropDown {
+    text-align: center;
+      position: relative;
+    display: inline-block;
+}
+
+.shoppingMenu {
+    grid-row: 1/4;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
+}
+
+.box {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 0fr 2fr 2fr 2fr;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+
+
+h1 {
+    color: white;
+    font-size: 2vh;
+    text-align: left;
+    grid-column: 2;
+    font-size: 0vh;
+}
+
+
+.itemMenu {
+    display: none;
+     z-index: 1;
+    position: absolute;
+    left: 28%;
+    right: 50%;
+}
+
+
+
+.itemMenu h3 {
+    font-size: 30px;
+    color: white;
+    width: 26vw;
+
+}
+
+
+.itemMenu h3:hover {
+    background-color: grey;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+    width: 26vw;
+
+}
+
+.dropDown:hover .itemMenu {
+    display: block;
+}
+
+.dropDown:hover .but1{
+    background-color: red;
+    color: black;
+}
+
+
+
+.img {
+    width: 0;
+    height: 0;
+    background: none;
+}
+
+.img1 {
+    grid-row: 1; 
+     grid-column:3;
+}
+
+.img2 {
+    grid-row: 2; 
+     grid-column:3;
+}
+
+.img3 {
+    grid-row: 3;
+     grid-column:3;
+}
+
+.img4 {
+    grid-row: 4; 
+     grid-column:3;
+}
+
+
+.cart1 {
+    grid-row: 1; 
+     grid-column:4;
+}
+
+.cart2 {
+    grid-row: 2; 
+     grid-column:4;
+}
+
+.cart3 {
+    grid-row: 3;
+     grid-column:4;
+}
+
+.cart4 {
+    grid-row: 4; 
+     grid-column:4;
+}
+
+
+
+.bigKayak {
+    width: 40vw;
+    height 40vh;
+    justify-self: center;
+    position: absolute;
+    bottom: 0;
+   left: 30vw; 
+   right: 30vw;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

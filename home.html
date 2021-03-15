@@ -26,7 +26,6 @@
 
 
 
-
     <section class="header">
 
 
@@ -39,15 +38,15 @@
             </div>
         </div>
 
-         <div class="dropDown" id="abc">
-        <img src="Img/sCart.png" class="sCart">
- <div class="itemMenu" id="itemsMenu">
-        
-     
-     <h2 class="h2" id="hTwo"> hflkjds;</h2>
-     
-        </div>
-        
+        <div class="dropDown ; shoppingCart" id="abc">
+            <img src="Img/sCart.png" class="sCart">
+            <div class="itemMenu" id="itemsMenu">
+
+
+                <h2 class="h2" id="hTwo"> empty</h2>
+
+            </div>
+
         </div>
 
     </section>
@@ -64,92 +63,88 @@
         <div class="img3"> <img src="Img/kayak.png" class="img"> </div>
         <div class="img4"> <img src="Img/kayak.png" class="img"> </div>
 
-        <div class="cart1" onclick="addItem(['z','a'])"> <img src="Img/add.png" class="img"></div>
-        <div class="cart2" onclick="addItem(['z','b'])"> <img src="Img/add.png" class="img"> </div>
-        <div class="cart3" onclick="addItem(['z','c'])"> <img src="Img/add.png" class="img"> </div>
-        <div class="cart4" onclick="addItem(['z','d'])"> <img src="Img/add.png" class="img"> </div>
+        <div class="cart1" onclick="addItem(['z','1 '])"> <img src="Img/add.png" class="img"></div>
+        <div class="cart2" onclick="addItem(['z','2 '])"> <img src="Img/add.png" class="img"> </div>
+        <div class="cart3" onclick="addItem(['z','3 '])"> <img src="Img/add.png" class="img"> </div>
+        <div class="cart4" onclick="addItem(['z','4 '])"> <img src="Img/add.png" class="img"> </div>
 
     </div>
 
-
-
-    <img src="Img/kayak.png" class="bigKayak">
+    <img src="Img/kayak2.png" class="bigKayak">
 
 </body>
 
 </html>
 
 <script>
-    //    var imgSize = '5px';
+    //    var imgSize = '5px';//
     var ay = document.getElementById('box1');
     var h1 = ay.getElementsByClassName('h1');
     var img = ay.getElementsByClassName('img');
-  var h2 = document.getElementById('hTwo');
+    var h2 = document.getElementById('hTwo');
     var box1Active = false;
     var cartItems = [];
     var itemType = '';
-    
-    
-    
-    function addItem(x) {
-        console.log(x);
-    console.log('hello');
+    var kCount = '0';
+    var  bCount = '0';
+    var  dCount = '0';
 
- addItem[0] = itemType;
+    function addItem(x) {
         
+        x[0] = itemType;
         
-      cartItems.push(x);
-   
-        h2.innerHTML =   cartItems;
-        
+//        console.log(x);
+//        console.log('hello');
+
+        addItem[0] = itemType;
+        cartItems.push(x);
+        h2.innerHTML = cartItems;
     }
 
- 
+
     var kText = [
         'kayak1',
         'kayak2',
         'kayak3',
         'kayak4'
-    ]  
+    ]
     var kImg = [
         'Img/kayak.png',
-        'Img/kayak.png',
-        'Img/kayak.png',
-        'Img/kayak.png',
-    ]  
+        'Img/kayak2.png',
+        'Img/kayak3.png',
+        'Img/kayak4.png',
+    ]
     var bText = [
         'bike1',
         'bike2',
         'bike3',
         'bike4'
-    ] 
+    ]
     var bImg = [
+        'Img/bike4.png',
         'Img/bike.png',
-        'Img/bike.png',
-        'Img/bike.png',
-        'Img/bike.png',
+        'Img/bike2.png',
+        'Img/bike3.png',
     ]
     var dText = [
         'drinkBottle1',
         'drinkBottle2',
         'drinkBottle3',
         'drinkBottle4'
-    ]  
+    ]
     var dImg = [
         'Img/bottle.png',
-        'Img/bottle.png',
-        'Img/bottle.png',
-        'Img/bottle.png',
+        'Img/bottle2.png',
+        'Img/bottle3.png',
+        'Img/bottle4.png',
     ]
     
-
-
-
     function kaks() {
         for (var i = 0; i < h1.length; i++) {
             h1[i].innerHTML = kText[i];
             img[i].src = kImg[i];
             itemType = 'kayak';
+            kCount +=1;
         }
     }
 
@@ -178,202 +173,36 @@
                 h1[i].style.fontSize = '3vh';
                 img[i].style.height = '5vh';
                 img[i].style.width = '5vh';
-                img[i+4].style.height = '5vh';
-                img[i+4].style.width = '5vh';
-   }
-        }
-    
-
-           
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-
-    
-//        
-//        else { //later will bring up menu
-//       
-//        }
-//    }
-//    
-    
-    
-    function reset() {
-             for (var i = 0; i < h1.length; i++) {
-                h1[i].style.fontSize = '0';
-                img[i].style.width = '0';
-                img[i].style.height = '0';
-                  img[i+4].style.height = '0';
-                img[i+4].style.width = '0';
-                 kActive = false;
-                 bactive = false;
-                 dactive = false;
+                img[i + 4].style.height = '5vh';
+                img[i + 4].style.width = '5vh';
             }
-    }
-    
-    
-    
-    
-    
+        }
 
-    
-    
+
+    }
+
+    //        
+    //        else { //later will bring up menu
+    //       
+    //        }
+    //    }
+    //    
+
+
+    function reset() {
+        for (var i = 0; i < h1.length; i++) {
+            h1[i].style.fontSize = '0';
+            img[i].style.width = '0';
+            img[i].style.height = '0';
+            img[i + 4].style.height = '0';
+            img[i + 4].style.width = '0';
+            kActive = false;
+            bactive = false;
+            dactive = false;
+        }
+    }
 
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
