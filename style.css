@@ -3,6 +3,12 @@ html {
 }
 
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
 body {
     display: grid;
     grid-template-rows: 15vh 60vh 25vh;
@@ -87,30 +93,31 @@ img.logo {
 
 }
 
+
+
+
 .header {
     display: grid;
-    grid-template-columns: 53fr auto 10fr;
+    grid-template-columns: 5fr 30fr auto 10fr;
     grid-template-rows:  10vh;
-
-}
-
-img.sCart {
     height: 10vh;
 }
 
 .but1 {
     border: none;
-    grid-column: 3;
+    grid-column: 4;
     background: none;
+    background-color: black;
     color: red;
     text-align: center;
     align-self: center;
     font-size: 4vh;
-    transition: font-size 0.12s, color 0.6s, background-color 0.4s;
+    transition: font-size 0.12s, color 0.6s, background-color 0.4s, border 0.6s;
     padding: 0;
-    width: 20vw;
+    width: 25vw;
     justify-self: center;
-    border-radius: 6px;
+    border-radius: 0.6vh;
+    border: 0.3vh solid red;
 }
 
 
@@ -118,19 +125,34 @@ img.sCart {
     font-size: 5vh;
     color: black;
     background-color: red;
+
 }
 
 
+.dropDown:hover .but1{
+    background-color: red;
+    font-size: 5vh;
+    color: black;
+       border: 0.3vh solid black;
+
+}
+
+.dropDown1 {
+    grid-column: 2;
+}
 
 .dropDown {
     text-align: center;
       position: relative;
     display: inline-block;
+    height: 3vh;
+    width: 5vh;
 }
 
 .shoppingMenu {
     grid-row: 1/4;
     display: grid;
+    grid-template-rows: 1fr;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;
 }
 
@@ -140,6 +162,7 @@ img.sCart {
     display: grid;
     grid-template-columns: 0fr 2fr 2fr 2fr;
     grid-template-rows: repeat(4, 1fr);
+    grid-row-gap: 3.1415927vh;
 }
 
 
@@ -150,47 +173,86 @@ h1 {
     text-align: left;
     grid-column: 2;
     font-size: 0vh;
+    margin-left: 10px;
 }
 
 
-.itemMenu {
+.itemMenu  {
     display: none;
      z-index: 1;
-    position: absolute;
-    left: 28%;
-    right: 50%;
+/*    position: absolute;*/
+/*    left: 28%;*/
+/*    right: 50%;*/
+    grid-row: 1/2;
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    width: 25vw;
 }
 
+.itemMenu2 {
+    display: none;
+    z-index: 1;
+    width: 10vw;
+
+}
 
 
 .itemMenu h3 {
-    font-size: 30px;
+    margin: 1vh 0 0 0;
+    font-size: 4vh;
     color: white;
-    width: 26vw;
-
+    width: auto;
+    text-align: center;
+    justify-self: center;
+    border: 0.2vh solid grey;
+    border-radius: 0.7vh;
 }
 
 
-.itemMenu h3:hover {
+.itemMenu  h3:hover {
     background-color: grey;
-    border-radius: 5px;
+    border: 0.2vh solid white; 
+    color: rgb(40,40,40);
+    transition: background-color 0.3s, border 0.3s, color 0.3s;
 }
 
-h2 {
+.h2 {
     font-size: 30px;
     color: white;
     width: 26vw;
+    text-align: left;
+}
+
+.dropDown:hover .itemMenu , .dropDown:hover .itemMenu2{
+    display: grid;
+}
+
+
+.shoppingCart {
+    grid-column: 3;
+}
+
+.sCart {
+    height: 15vh;
 
 }
 
-.dropDown:hover .itemMenu {
-    display: block;
+
+
+.dropDown:hover .shoppingCart{
+    display: grid;
+    width: 1vw;
+  
+    
+    grid-template-rows: 5fr;
+    grid-template-columns: 1fr;
+
+/*    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr) ) ;*/
 }
 
-.dropDown:hover .but1{
-    background-color: red;
-    color: black;
-}
+
 
 
 
@@ -244,14 +306,15 @@ h2 {
 
 
 .bigKayak {
-    width: 40vw;
-    height 40vh;
+   
+    height: 30vh;
     justify-self: center;
     position: absolute;
     bottom: 0;
    left: 30vw; 
    right: 30vw;
 }
+
 
 
 
