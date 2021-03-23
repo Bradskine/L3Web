@@ -1,16 +1,16 @@
 <!doctype html>
 
-<html>
+<html lan="en">
 
 <head>
     <title>practise</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
+<meta charset="utf-8" />
+
 
 <body>
-
-
 
     <nav class="wow">
 
@@ -43,7 +43,10 @@
             <div class="itemMenu2" id="itemsMenu">
 
 
-                <h2 class="h2" id="hTwo"> empty</h2>
+                <h2 class="h2 left" id="hTwo"> empty</h2> 
+                <h2 class="h2 right" id="hToo"> go buy so   mething</h2>
+                
+                
 
             </div>
 
@@ -58,10 +61,10 @@
         <h1 class="h1">diffirent think</h1>
         <h1 class="h1">not the same thing</h1>
 
-        <div class="img1"> <img src="Img/kayak.png" class="img veiwImg" onmouseover="getBig() img1"></div>
-        <div class="img2"> <img src="Img/kayak.png" class="img veiwImg" onmouseover="getBig() img2"> </div>
-        <div class="img3"> <img src="Img/kayak.png" class="img veiwImg" onmouseover="getBig() img3"> </div>
-        <div class="img4"> <img src="Img/kayak.png" class="img veiwImg" onmouseover="getBig() img4"> </div>
+        <div class="img1"> <img src="Img/kayak.png" class="img veiwImg  img1"></div>
+        <div class="img2"> <img src="Img/kayak.png" class="img veiwImg  img2"> </div>
+        <div class="img3"> <img src="Img/kayak.png" class="img veiwImg  img3"> </div>
+        <div class="img4"> <img src="Img/kayak.png" class="img veiwImg img4"> </div>
 
         <div class="cart1" onclick="addItem(['z',1 ])"> <img src="Img/add.png" class="img"></div>
         <div class="cart2" onclick="addItem(['z',2 ])"> <img src="Img/add.png" class="img"> </div>
@@ -82,70 +85,86 @@
     var h1 = ay.getElementsByClassName('h1');
     var img = ay.getElementsByClassName('img');
     var h2 = document.getElementById('hTwo');
+    var h2Right = document.getElementById('hToo');
     var box1Active = false;
-    var cartItems = [];
+    var cartItems = [
+        [], //will be the item type eg kayak bike or bottle
+        [] //will be the tiem number
+    ];
     var itemType = '';
     var itemNumber = '';
     var kCount = '0';
     var bCount = '0';
     var dCount = '0';
+    var pass = true;
+    var pass2 = true;
+    var nu = '';
     //    var lastItemType = '';
     //    var lastItemNumber = '';
 
+
+
     function addItem(x) {
 
-        //        x[0] = itemType;
 
 
-        //        console.log(x);
-        //        console.log('hello');
-
-        //        && 
-
-        var ty = addItem[0];
-        var nu = addItem[1];
+        pass = true;
 
 
-        for (var i = cartItems.length; i > -1; i--) {
-            console.log('heello');
-            //            || addItem[1] != cartItems[]
-            //            will convert cartietms into [[]] later
+         nu = x[1];
 
-            //            need to fix if statemtn below;
-
-            // kinda need to look at how uld stuff worked 
+        ty = itemType;
 
 
-            if (ty == cartItems[0]) {
-                console.log('hellso');
-                addItem[0] = itemType;
-                cartItems.push(x);
-                h2.innerHTML = cartItems;
+
+        //
+        //    console.log(ty);
+        //    console.log(nu);
+
+        for (var i = cartItems[0].length; i > 0;) {
+            console.log('one');
 
 
+            
+            console.log(ty);
+            console.log(cartItems[0][i-1]);
+            console.log(nu);
+            console.log(cartItems[1][i-1]);
+            
+
+            if (ty != cartItems[0][i-1] || nu  != cartItems[1][i-1]) {
+                i = i - 1;
+                pass = true;
+            } else {
+                pass = false;
+                i = 0;
+                console.log('what');
+        
             }
-
-
 
         }
 
 
 
-        //        
-        //        if(lastItemType != itemType || lastItemNumber != x[1]) {
-        //
-        //             addItem[0] = itemType;
-        //            cartItems.push(x);
-        //            h2.innerHTML = cartItems;
-        //            lastItemType = itemType;
-        //            lastItemNumber = x[1];
-        //        }  
-        //    
+        if (pass == true) {
+            cartItems[0].push(itemType);
+            cartItems[1].push(nu);
+            
+            
+            
+            
+            h2.innerHTML = cartItems[0];
+            h2Right.innerHTML = cartItems[1];
+        
+        }
 
-        var counts = {};
-        cartItems.forEach(function(x) {
-            counts[x] = (counts[x] || 0) + 1;
-        });
+
+        
+
+//        var counts = {};
+//        cartItems.forEach(function(x) {
+//            counts[x] = (counts[x] || 0) + 1;
+//        });
 
     }
 
@@ -257,6 +276,4 @@
 
 
 <!--
-
-
-appendTo the sky of the god-->
+append To the sky of the god-->

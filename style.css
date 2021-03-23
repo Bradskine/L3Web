@@ -98,7 +98,7 @@ img.logo {
 
 .header {
     display: grid;
-    grid-template-columns: 5fr 30fr auto 10fr;
+    grid-template-columns:  10fr  10fr;
     grid-template-rows:  10vh;
     height: 10vh;
 }
@@ -138,7 +138,7 @@ img.logo {
 }
 
 .dropDown1 {
-    grid-column: 2;
+    grid-column: 1;
 }
 
 .dropDown {
@@ -146,7 +146,7 @@ img.logo {
       position: relative;
     display: inline-block;
     height: 3vh;
-    width: 5vh;
+    width: auto;
 }
 
 .shoppingMenu {
@@ -158,9 +158,10 @@ img.logo {
 
 .box {
     grid-column: 2;
+    margin-left: 4vw;
     grid-row: 2;
     display: grid;
-    grid-template-columns: 0fr 2fr 2fr 2fr;
+    grid-template-columns: 0fr 1.2fr 1.2fr 2fr 3fr;
     grid-template-rows: repeat(4, 1fr);
     grid-row-gap: 3.1415927vh;
 }
@@ -184,20 +185,28 @@ h1 {
 /*    left: 28%;*/
 /*    right: 50%;*/
     grid-row: 1/2;
-    grid-column: 2/3;
+    grid-column: 1;
     align-self: center;
     justify-self: center;
     text-align: center;
-    width: 25vw;
+    width: auto;
 }
 
 .itemMenu2 {
     display: none;
     z-index: 1;
-    width: 10vw;
-
+    width: 100%;
+    align-content: center;
+    text-align: center;
+ grid-template-columns: 2.3fr 1fr;
+    grid-template-rows: 1fr;
 }
 
+.itemMenu2:hover {
+    align-content: center;
+
+
+}
 
 .itemMenu h3 {
     margin: 1vh 0 0 0;
@@ -208,6 +217,9 @@ h1 {
     justify-self: center;
     border: 0.2vh solid grey;
     border-radius: 0.7vh;
+    padding: 0.2vh 1vh;
+    
+    
 }
 
 
@@ -219,11 +231,21 @@ h1 {
 }
 
 .h2 {
-    font-size: 30px;
+    font-size: 3vh;
     color: white;
-    width: 26vw;
+    width: auto;
+
+}
+
+.right {
     text-align: left;
 }
+
+.left {
+    text-align: center;
+}
+
+
 
 .dropDown:hover .itemMenu , .dropDown:hover .itemMenu2{
     display: grid;
@@ -231,7 +253,13 @@ h1 {
 
 
 .shoppingCart {
-    grid-column: 3;
+    grid-column: 2;
+    justify-items: center;
+}
+
+#abc {
+    align-items: center;
+    justify-content: center;
 }
 
 .sCart {
@@ -243,7 +271,7 @@ h1 {
 
 .dropDown:hover .shoppingCart{
     display: grid;
-    width: 1vw;
+/*    width: 1vw;*/
   
     
     grid-template-rows: 5fr;
@@ -260,6 +288,12 @@ h1 {
     width: 0;
     height: 0;
     background: none;
+
+margin: 0 9vw;
+
+    
+    
+    
 }
 
 .img1 {
@@ -314,39 +348,3 @@ h1 {
    left: 30vw; 
    right: 30vw;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
