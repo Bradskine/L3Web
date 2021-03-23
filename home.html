@@ -42,10 +42,10 @@
             <img src="Img/sCart.png" class="sCart">
             <div class="itemMenu2" id="itemsMenu">
 
-
+              
                 <h2 class="h2 left" id="hTwo"> empty</h2> 
-                <h2 class="h2 right" id="hToo"> go buy so   mething</h2>
-                
+                <h2 class="h2 right" id="hToo"> </h2>
+                 <h2 class="h2 count" id="hTo"> </h2> 
                 
 
             </div>
@@ -86,10 +86,12 @@
     var img = ay.getElementsByClassName('img');
     var h2 = document.getElementById('hTwo');
     var h2Right = document.getElementById('hToo');
+    var h2Three = document.getElementById('hTo');
     var box1Active = false;
     var cartItems = [
         [], //will be the item type eg kayak bike or bottle
-        [] //will be the tiem number
+        [], //will be the tiem number
+        []
     ];
     var itemType = '';
     var itemNumber = '';
@@ -99,9 +101,9 @@
     var pass = true;
     var pass2 = true;
     var nu = '';
+    
     //    var lastItemType = '';
     //    var lastItemNumber = '';
-
 
 
     function addItem(x) {
@@ -122,14 +124,14 @@
         //    console.log(nu);
 
         for (var i = cartItems[0].length; i > 0;) {
-            console.log('one');
+//            console.log('one');
 
 
-            
-            console.log(ty);
-            console.log(cartItems[0][i-1]);
-            console.log(nu);
-            console.log(cartItems[1][i-1]);
+//            
+//            console.log(ty);
+//            console.log(cartItems[0][i-1]);
+//            console.log(nu);
+//            console.log(cartItems[1][i-1]);
             
 
             if (ty != cartItems[0][i-1] || nu  != cartItems[1][i-1]) {
@@ -137,8 +139,24 @@
                 pass = true;
             } else {
                 pass = false;
+                      
+                
+                
+                
+                
+                
+//                cartItems[2] += 1;
+//                
+//                
+//                
+//                
+//                 h2Three.innerHTML =  cartItems[2];
+                
                 i = 0;
-                console.log('what');
+                
+                
+                
+//                console.log('what');
         
             }
 
@@ -149,12 +167,25 @@
         if (pass == true) {
             cartItems[0].push(itemType);
             cartItems[1].push(nu);
+            cartItems[2].push("x  " + 1);
             
             
             
             
-            h2.innerHTML = cartItems[0];
-            h2Right.innerHTML = cartItems[1];
+            cartItems[0].push('<br>');
+            cartItems[1].push('<br>');
+            cartItems[2].push('<br>');
+            
+            
+            
+            
+            cartItems.join('');
+            
+            h2.innerHTML = cartItems[0].join('');
+            h2Right.innerHTML = cartItems[1].join('');
+            h2Three.innerHTML = cartItems[2].join('');
+            
+            
         
         }
 
@@ -277,3 +308,10 @@
 
 <!--
 append To the sky of the god-->
+
+
+
+
+
+
+
