@@ -101,6 +101,7 @@
     var pass = true;
     var pass2 = true;
     var nu = '';
+    var cartCount = "1 ";
     
     //    var lastItemType = '';
     //    var lastItemNumber = '';
@@ -127,48 +128,37 @@
 //            console.log('one');
 
 
-//            
-//            console.log(ty);
-//            console.log(cartItems[0][i-1]);
-//            console.log(nu);
-//            console.log(cartItems[1][i-1]);
-            
-
             if (ty != cartItems[0][i-1] || nu  != cartItems[1][i-1]) {
                 i = i - 1;
                 pass = true;
             } else {
-                pass = false;
-                      
                 
                 
                 
+        pass = false;
+
+                    var idid =     parseFloat(cartItems[2][i-1]) +1;
+               
+console.log(idid);
                 
                 
-//                cartItems[2] += 1;
-//                
-//                
-//                
-//                
-//                 h2Three.innerHTML =  cartItems[2];
+                cartItems[2][i-1] = idid;
+                
+                 h2Three.innerHTML = cartItems[2].join('');
+                
                 
                 i = 0;
-                
-                
-                
-//                console.log('what');
+ 
         
             }
 
         }
 
 
-
         if (pass == true) {
             cartItems[0].push(itemType);
             cartItems[1].push(nu);
-            cartItems[2].push("x  " + 1);
-            
+            cartItems[2].push(cartCount);
             
             
             
@@ -176,7 +166,8 @@
             cartItems[1].push('<br>');
             cartItems[2].push('<br>');
             
-            
+
+            cartItems.sort();
             
             
             cartItems.join('');
@@ -184,18 +175,8 @@
             h2.innerHTML = cartItems[0].join('');
             h2Right.innerHTML = cartItems[1].join('');
             h2Three.innerHTML = cartItems[2].join('');
-            
-            
-        
+                     
         }
-
-
-        
-
-//        var counts = {};
-//        cartItems.forEach(function(x) {
-//            counts[x] = (counts[x] || 0) + 1;
-//        });
 
     }
 
