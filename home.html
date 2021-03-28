@@ -42,11 +42,14 @@
             <img src="Img/sCart.png" class="sCart">
             <div class="itemMenu2" id="itemsMenu">
 
-              
-                <h2 class="h2 left" id="hTwo"> empty</h2> 
+
+                <h2 class="h2 left" id="hTwo"> empty</h2>
                 <h2 class="h2 right" id="hToo"> </h2>
-                 <h2 class="h2 count" id="hTo"> </h2> 
-                
+                <h2 class="h2 count" id="hTo"> </h2>
+
+<!--                <img src="Img/add.png" class="remove remove1" id="rem"></img>-->
+                   <div class="remove" id="rem"> </div>
+
 
             </div>
 
@@ -70,6 +73,7 @@
         <div class="cart2" onclick="addItem(['z',2 ])"> <img src="Img/add.png" class="img"> </div>
         <div class="cart3" onclick="addItem(['z',3 ])"> <img src="Img/add.png" class="img"> </div>
         <div class="cart4" onclick="addItem(['z',4 ])"> <img src="Img/add.png" class="img"> </div>
+        
 
     </div>
 
@@ -87,11 +91,13 @@
     var h2 = document.getElementById('hTwo');
     var h2Right = document.getElementById('hToo');
     var h2Three = document.getElementById('hTo');
+    var remove = document.getElementById('rem');
+    //    remove = new array[];
     var box1Active = false;
     var cartItems = [
-        [], //will be the item type eg kayak bike or bottle
-        [], //will be the tiem number
-        []
+        [], // item type eg kayak bike or bottle
+        [], //item number
+        []  //item count  
     ];
     var itemType = '';
     var itemNumber = '';
@@ -102,22 +108,19 @@
     var pass2 = true;
     var nu = '';
     var cartCount = "1 ";
-    
+
     //    var lastItemType = '';
     //    var lastItemNumber = '';
 
 
     function addItem(x) {
 
-
-
         pass = true;
 
 
-         nu = x[1];
+        nu = x[1];
 
         ty = itemType;
-
 
 
         //
@@ -125,31 +128,31 @@
         //    console.log(nu);
 
         for (var i = cartItems[0].length; i > 0;) {
-//            console.log('one');
+            //            console.log('one');
 
 
-            if (ty != cartItems[0][i-1] || nu  != cartItems[1][i-1]) {
+            if (ty != cartItems[0][i - 1] || nu != cartItems[1][i - 1]) {
                 i = i - 1;
                 pass = true;
             } else {
-                
-                
-                
-        pass = false;
 
-                    var idid =     parseFloat(cartItems[2][i-1]) +1;
-               
-console.log(idid);
-                
-                
-                cartItems[2][i-1] = idid;
-                
-                 h2Three.innerHTML = cartItems[2].join('');
-                
-                
+
+
+                pass = false;
+
+                var idid = parseFloat(cartItems[2][i - 1]) + 1;
+
+                console.log(idid);
+
+
+                cartItems[2][i - 1] = idid;
+
+                h2Three.innerHTML = cartItems[2].join('');
+
+
                 i = 0;
- 
-        
+
+
             }
 
         }
@@ -159,24 +162,36 @@ console.log(idid);
             cartItems[0].push(itemType);
             cartItems[1].push(nu);
             cartItems[2].push(cartCount);
-            
-            
-            
+
+
+
             cartItems[0].push('<br>');
             cartItems[1].push('<br>');
             cartItems[2].push('<br>');
-            
+
 
             cartItems.sort();
-            
-            
+
+
             cartItems.join('');
-            
+
             h2.innerHTML = cartItems[0].join('');
             h2Right.innerHTML = cartItems[1].join('');
             h2Three.innerHTML = cartItems[2].join('');
-                     
+
+
+            rem.style.height = '3vh';
+            
+           
+
         }
+        
+        
+        
+        
+        
+        
+        
 
     }
 
@@ -257,13 +272,6 @@ console.log(idid);
 
     }
 
-    //        
-    //        else { //later will bring up menu
-    //       
-    //        }
-    //    }
-    //    
-
     function reset() {
         for (var i = 0; i < h1.length; i++) {
             h1[i].style.fontSize = '0';
@@ -289,10 +297,3 @@ console.log(idid);
 
 <!--
 append To the sky of the god-->
-
-
-
-
-
-
-
