@@ -47,9 +47,18 @@
                 <h2 class="h2 right" id="hToo"> </h2>
                 <h2 class="h2 count" id="hTo"> </h2>
 
-<!--                <img src="Img/add.png" class="remove remove1" id="rem"></img>-->
-                   <div class="remove" id="rem"> </div>
-
+                <button class="button2" onclick="re('1a')"><img src="Img/add.png" class="remove" id="rem"></button>
+                <button class="button2" onclick="re('2b')"><img src="Img/add.png" class="remove" id="rem2"></button>
+                <button class="button2" onclick="re('3c')"><img src="Img/add.png" class="remove" id="rem3"></button>
+                <button class="button2" onclick="re('4d')"> <img src="Img/add.png" class="remove" id="rem4"></button>
+                <button class="button2" onclick="re('5e')"> <img src="Img/add.png" class="remove" id="rem5"></button>
+                <button class="button2" onclick="re('6f')"> <img src="Img/add.png" class="remove" id="rem6"></button>
+                <button class="button2" onclick="re('7g')"> <img src="Img/add.png" class="remove" id="rem7"></button>
+                <button class="button2" onclick="re('8h')"> <img src="Img/add.png" class="remove" id="rem8"></button>
+                <button class="button2" onclick="re('9i')"><img src="Img/add.png" class="remove" id="rem9"></button>
+                <button class="button2" onclick="re('10j')"> <img src="Img/add.png" class="remove" id="rem10"></button>
+                <button class="button2" onclick="re('11k')"> <img src="Img/add.png" class="remove" id="rem11"></button>
+                <button class="button2" onclick="re('12l')"> <img src="Img/add.png" class="remove" id="rem12"></button>
 
             </div>
 
@@ -73,7 +82,7 @@
         <div class="cart2" onclick="addItem(['z',2 ])"> <img src="Img/add.png" class="img"> </div>
         <div class="cart3" onclick="addItem(['z',3 ])"> <img src="Img/add.png" class="img"> </div>
         <div class="cart4" onclick="addItem(['z',4 ])"> <img src="Img/add.png" class="img"> </div>
-        
+
 
     </div>
 
@@ -91,13 +100,13 @@
     var h2 = document.getElementById('hTwo');
     var h2Right = document.getElementById('hToo');
     var h2Three = document.getElementById('hTo');
-    var remove = document.getElementById('rem');
     //    remove = new array[];
     var box1Active = false;
     var cartItems = [
         [], // item type eg kayak bike or bottle
         [], //item number
-        []  //item count  
+        [] //item count  
+
     ];
     var itemType = '';
     var itemNumber = '';
@@ -122,43 +131,29 @@
 
         ty = itemType;
 
-
-        //
-        //    console.log(ty);
-        //    console.log(nu);
-
         for (var i = cartItems[0].length; i > 0;) {
-            //            console.log('one');
-
 
             if (ty != cartItems[0][i - 1] || nu != cartItems[1][i - 1]) {
                 i = i - 1;
                 pass = true;
             } else {
 
-
-
                 pass = false;
 
                 var idid = parseFloat(cartItems[2][i - 1]) + 1;
-
-                console.log(idid);
 
 
                 cartItems[2][i - 1] = idid;
 
                 h2Three.innerHTML = cartItems[2].join('');
-
-
                 i = 0;
-
-
             }
 
         }
 
 
         if (pass == true) {
+
             cartItems[0].push(itemType);
             cartItems[1].push(nu);
             cartItems[2].push(cartCount);
@@ -180,21 +175,88 @@
             h2Three.innerHTML = cartItems[2].join('');
 
 
-            rem.style.height = '3vh';
-            
-           
 
+            var a = cartItems[0].length / 2;
+            a = cartItems[0].length / 2;
+
+            var remMargin = (a * 3.43) - 3 + 'vh';
+
+
+            if (a == 1) {
+                rem.style.height = '3vh';
+            } else if (a == 2) {
+                rem2.style.height = '3vh';
+                rem2.style.marginTop = remMargin;
+            } else if (a == 3) {
+                rem3.style.height = '3vh';
+                rem3.style.marginTop = remMargin;
+            } else if (a == 4) {
+                rem4.style.height = '3vh';
+                rem4.style.marginTop = remMargin;
+            } else if (a == 5) {
+                rem5.style.height = '3vh';
+                rem5.style.marginTop = remMargin;
+            } else if (a == 6) {
+                rem6.style.height = '3vh';
+                rem6.style.marginTop = remMargin;
+            } else if (a == 7) {
+                rem7.style.height = '3vh';
+                rem7.style.marginTop = remMargin;
+            } else if (a == 8) {
+                rem8.style.height = '3vh';
+                rem8.style.marginTop = remMargin;
+            } else if (a == 9) {
+                rem9.style.height = '3vh';
+                rem9.style.marginTop = remMargin;
+            } else if (a == 10) {
+                rem10.style.height = '3vh';
+                rem10.style.marginTop = remMargin;
+            } else if (a == 11) {
+                rem11.style.height = '3vh';
+                rem11.style.marginTop = remMargin;
+            } else if (a == 12) {
+                rem12.style.height = '3vh';
+                rem12.style.marginTop = remMargin;
+            }
+
+
+        }
+    }
+
+
+
+
+    function re(x) {
+        console.log(x);
+        var cnt = parseFloat(x) -1;   //need to fix thisz
+        console.log(cnt);
+        
+        if(cartItems[2][cnt] > 1) {
+            var newCartItem = (cartItems[2][cnt]) - 1;
+            
+            cartItems[2][cnt] = newCartItem;
+            
+            h2Three.innerHTML = cartItems[2].join('');
+     
+        
+            
         }
         
         
         
-        
-        
-        
-        
-
+//                cartItems[2][cnt] -= 1;
+           
     }
 
+
+//   var idid = parseFloat(cartItems[2][i - 1]) + 1;
+//
+//
+//                cartItems[2][i - 1] = idid;
+//
+//                h2Three.innerHTML = cartItems[2].join('');
+//
+//
 
     var kText = [
         'kayak1',

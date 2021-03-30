@@ -200,10 +200,12 @@ h1 {
     width: 100%;
     align-content: center;
     text-align: center;
- grid-template-columns: 2.3fr 1fr 1.4fr;
+ grid-template-columns: 2.3fr 1fr 1.4fr 1fr;
     grid-template-rows: 1fr;
-    text-align: left;
+    text-align: center;
+
 }
+
 
 
 /*
@@ -212,13 +214,27 @@ h1 {
 }
 */
 
-
-.remove {   /* delte cart items */
-    background-color: white;
-    width: 10vh;
-    height: 0vh;
-    grid-column: 5;
+.number2 {
+    grid-row: 2;
 }
+
+.remove{   /* delte cart items */
+    background-color: white;
+    width: 3vh;
+    height: 0vh;
+    grid-column: 4;
+    grid-row: 1;
+}
+
+.button2 {
+    height: 0;
+    width: 0;
+    border: none;
+    grid-column: 4;
+    grid-row: 1;
+   
+}
+
 
 
 .itemMenu2:hover {
@@ -253,16 +269,9 @@ h1 {
     font-size: 3vh;
     color: white;
     width: auto;
-
 }
 
-.right {
-    text-align: left;
-}
 
-.left {
-    text-align: center;
-}
 
 .dropDown:hover .itemMenu , .dropDown:hover .itemMenu2{
     display: grid;
@@ -308,9 +317,6 @@ h1 {
 
 margin: 0 9vw;
 
-    
-    
-    
 }
 
 .img1 {
@@ -365,29 +371,3 @@ margin: 0 9vw;
    left: 30vw; 
    right: 30vw;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
