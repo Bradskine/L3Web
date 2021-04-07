@@ -3,7 +3,7 @@
 <html lan="en">
 
 <head>
-    <title>practise</title>
+    <title>Home</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
@@ -15,7 +15,7 @@
     <nav class="wow">
 
         <a href="home.html" class="ab">Home</a>
-        <a href="page1.html" class="ab">Page1</a>
+        <a href="product.html" class="ab">products</a>
         <a href="page2.html" class="ab">Page2</a>
         <a href="media.html" class="ab">Media</a>
         <img src="Img/logo.png" class="logo">
@@ -28,60 +28,24 @@
 
     <section class="header">
 
-
-        <div class="dropDown dropDown1">
-            <button class="but1" id="b1" onclick='reset()'>items</button>
-            <div class="itemMenu" id="itemsMenu">
-                <h3 onclick="kaks(); item()" class="h3">Kayaks</h3>
-                <h3 onclick="bikes(); item()" class="h3">bikes</h3>
-                <h3 onclick="bots(); item()" class="h3">drinkBottles</h3>
-            </div>
-        </div>
-
-        <div class="dropDown shoppingCart" id="abc">
-            <img src="Img/sCart.png" class="sCart">
-            <div class="itemMenu2" id="itemsMenu">
-
-
-                <h2 class="h2 left" id="hTwo"> empty</h2>
-                <h2 class="h2 right" id="hToo"> </h2>
-                <h2 class="h2 count" id="hTo"> </h2>
-
-                <button class="button2" onclick="re('1a')"><img src="Img/add.png" class="remove" id="rem"></button>
-                <button class="button2" onclick="re('2b')"><img src="Img/add.png" class="remove" id="rem2"></button>
-                <button class="button2" onclick="re('3c')"><img src="Img/add.png" class="remove" id="rem3"></button>
-                <button class="button2" onclick="re('4d')"> <img src="Img/add.png" class="remove" id="rem4"></button>
-                <button class="button2" onclick="re('5e')"> <img src="Img/add.png" class="remove" id="rem5"></button>
-                <button class="button2" onclick="re('6f')"> <img src="Img/add.png" class="remove" id="rem6"></button>
-                <button class="button2" onclick="re('7g')"> <img src="Img/add.png" class="remove" id="rem7"></button>
-                <button class="button2" onclick="re('8h')"> <img src="Img/add.png" class="remove" id="rem8"></button>
-                <button class="button2" onclick="re('9i')"><img src="Img/add.png" class="remove" id="rem9"></button>
-                <button class="button2" onclick="re('10j')"> <img src="Img/add.png" class="remove" id="rem10"></button>
-                <button class="button2" onclick="re('11k')"> <img src="Img/add.png" class="remove" id="rem11"></button>
-                <button class="button2" onclick="re('12l')"> <img src="Img/add.png" class="remove" id="rem12"></button>
-
-            </div>
-
-        </div>
+        <h4>accend to the sky of the kayak god</h4>
 
     </section>
 
 
-    <div class="box" id="box1">
-        <h1 class="h1">thing</h1>
-        <h1 class="h1">ohter thinkg</h1>
-        <h1 class="h1">diffirent think</h1>
-        <h1 class="h1">not the same thing</h1>
+    <p>  
+    This purpose of this website is to sell the highest class kaykas, bikes and drink bottles. We are selling 4 diffirent types of each incluing galaxy and forest styles. 
+    
+    
+    
+    </p>
+    
+    
 
-        <div class="img1"> <img src="Img/kayak.png" class="img veiwImg  img1"></div>
-        <div class="img2"> <img src="Img/kayak.png" class="img veiwImg  img2"> </div>
-        <div class="img3"> <img src="Img/kayak.png" class="img veiwImg  img3"> </div>
-        <div class="img4"> <img src="Img/kayak.png" class="img veiwImg img4"> </div>
 
-        <div class="cart1" onclick="addItem(['z',1 ])"> <img src="Img/add.png" class="img"></div>
-        <div class="cart2" onclick="addItem(['z',2 ])"> <img src="Img/add.png" class="img"> </div>
-        <div class="cart3" onclick="addItem(['z',3 ])"> <img src="Img/add.png" class="img"> </div>
-        <div class="cart4" onclick="addItem(['z',4 ])"> <img src="Img/add.png" class="img"> </div>
+
+
+
 
 
     </div>
@@ -91,271 +55,3 @@
 </body>
 
 </html>
-
-<script>
-    //    var imgSize = '5px';//
-    var ay = document.getElementById('box1');
-    var h1 = ay.getElementsByClassName('h1');
-    var img = ay.getElementsByClassName('img');
-    var h2 = document.getElementById('hTwo');
-    var h2Right = document.getElementById('hToo');
-    var h2Three = document.getElementById('hTo');
-    //    remove = new array[];
-    var box1Active = false;
-    var cartItems = [
-        [], // item type eg kayak bike or bottle
-        [], //item number
-        [] //item count  
-
-    ];
-    var itemType = '';
-    var itemNumber = '';
-    var kCount = '0';
-    var bCount = '0';
-    var dCount = '0';
-    var pass = true;
-    var pass2 = true;
-    var nu = '';
-    var cartCount = "1 ";
-
-    //    var lastItemType = '';
-    //    var lastItemNumber = '';
-
-
-    function addItem(x) {
-
-        pass = true;
-
-
-        nu = x[1];
-
-        ty = itemType;
-
-        for (var i = cartItems[0].length; i > 0;) {
-
-            if (ty != cartItems[0][i - 1] || nu != cartItems[1][i - 1]) {
-                i = i - 1;
-                pass = true;
-            } else {
-
-                pass = false;
-
-                var idid = parseFloat(cartItems[2][i - 1]) + 1;
-
-
-                cartItems[2][i - 1] = idid;
-
-                h2Three.innerHTML = cartItems[2].join('');
-                i = 0;
-            }
-
-        }
-
-
-        if (pass == true) {
-
-            cartItems[0].push(itemType);
-            cartItems[1].push(nu);
-            cartItems[2].push(cartCount);
-
-
-
-            cartItems[0].push('<br>');
-            cartItems[1].push('<br>');
-            cartItems[2].push('<br>');
-
-
-            cartItems.sort();
-
-
-            cartItems.join('');
-
-            h2.innerHTML = cartItems[0].join('');
-            h2Right.innerHTML = cartItems[1].join('');
-            h2Three.innerHTML = cartItems[2].join('');
-
-
-
-            var a = cartItems[0].length / 2;
-            a = cartItems[0].length / 2;
-
-            var remMargin = (a * 3.43) - 3 + 'vh';
-
-
-            if (a == 1) {
-                rem.style.height = '3vh';
-            } else if (a == 2) {
-                rem2.style.height = '3vh';
-                rem2.style.marginTop = remMargin;
-            } else if (a == 3) {
-                rem3.style.height = '3vh';
-                rem3.style.marginTop = remMargin;
-            } else if (a == 4) {
-                rem4.style.height = '3vh';
-                rem4.style.marginTop = remMargin;
-            } else if (a == 5) {
-                rem5.style.height = '3vh';
-                rem5.style.marginTop = remMargin;
-            } else if (a == 6) {
-                rem6.style.height = '3vh';
-                rem6.style.marginTop = remMargin;
-            } else if (a == 7) {
-                rem7.style.height = '3vh';
-                rem7.style.marginTop = remMargin;
-            } else if (a == 8) {
-                rem8.style.height = '3vh';
-                rem8.style.marginTop = remMargin;
-            } else if (a == 9) {
-                rem9.style.height = '3vh';
-                rem9.style.marginTop = remMargin;
-            } else if (a == 10) {
-                rem10.style.height = '3vh';
-                rem10.style.marginTop = remMargin;
-            } else if (a == 11) {
-                rem11.style.height = '3vh';
-                rem11.style.marginTop = remMargin;
-            } else if (a == 12) {
-                rem12.style.height = '3vh';
-                rem12.style.marginTop = remMargin;
-            }
-
-
-        }
-    }
-
-
-
-
-    function re(x) {
-        console.log(x);
-        var cnt = parseFloat(x) -1;   //need to fix thisz
-        console.log(cnt);
-        
-        if(cartItems[2][cnt] > 1) {
-            var newCartItem = (cartItems[2][cnt]) - 1;
-            
-            cartItems[2][cnt] = newCartItem;
-            
-            h2Three.innerHTML = cartItems[2].join('');
-     
-        
-            
-        }
-        
-        
-        
-//                cartItems[2][cnt] -= 1;
-           
-    }
-
-
-//   var idid = parseFloat(cartItems[2][i - 1]) + 1;
-//
-//
-//                cartItems[2][i - 1] = idid;
-//
-//                h2Three.innerHTML = cartItems[2].join('');
-//
-//
-
-    var kText = [
-        'kayak1',
-        'kayak2',
-        'kayak3',
-        'kayak4'
-    ]
-    var kImg = [
-        'Img/kayak.png',
-        'Img/kayak2.png',
-        'Img/kayak3.png',
-        'Img/kayak4.png',
-    ]
-    var bText = [
-        'bike1',
-        'bike2',
-        'bike3',
-        'bike4'
-    ]
-    var bImg = [
-        'Img/bike4.png',
-        'Img/bike.png',
-        'Img/bike2.png',
-        'Img/bike3.png',
-    ]
-    var dText = [
-        'drinkBottle1',
-        'drinkBottle2',
-        'drinkBottle3',
-        'drinkBottle4'
-    ]
-    var dImg = [
-        'Img/bottle.png',
-        'Img/bottle2.png',
-        'Img/bottle3.png',
-        'Img/bottle4.png',
-    ]
-
-    function kaks() {
-        for (var i = 0; i < h1.length; i++) {
-            h1[i].innerHTML = kText[i];
-            img[i].src = kImg[i];
-            itemType = ' kayak';
-            kCount += 1;
-        }
-    }
-
-    function bikes() {
-        for (var i = 0; i < h1.length; i++) {
-            h1[i].innerHTML = bText[i];
-            img[i].src = bImg[i];
-            itemType = ' bike';
-        }
-    }
-
-    function bots() {
-        for (var i = 0; i < h1.length; i++) {
-            h1[i].innerHTML = dText[i];
-            img[i].src = dImg[i];
-            itemType = ' bottle';
-        }
-    }
-
-    function item() {
-        if (box1Active == false) {
-            for (var i = 0; i < h1.length; i++) {
-                h1[i].style.fontSize = '3vh';
-                img[i].style.height = '5vh';
-                img[i].style.width = '5vh';
-                img[i + 4].style.height = '5vh';
-                img[i + 4].style.width = '5vh';
-            }
-        }
-
-
-    }
-
-    function reset() {
-        for (var i = 0; i < h1.length; i++) {
-            h1[i].style.fontSize = '0';
-            img[i].style.width = '0';
-            img[i].style.height = '0';
-            img[i + 4].style.height = '0';
-            img[i + 4].style.width = '0';
-            kActive = false;
-            bactive = false;
-            dactive = false;
-        }
-    }
-
-    function getBig() {
-
-        img[1].style.height = '20vh';
-
-    }
-    // gonna make images get bigger when i hover
-
-</script>
-
-
-<!--
-append To the sky of the god-->
