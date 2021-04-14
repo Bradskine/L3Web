@@ -426,26 +426,24 @@ h1 {
 
 }
 
-.hov {
-    width: 4.6vh;
-    height: 4.6vh;
-    max-height: 4.6vh;
-    max-width: 4.6vh;
-}
+
 
 .veiwImg:hover {
     min-height: 38vh;
     min-width: 40vh;
     position: absolute;
     right: 0;
-    top: 10vh;
+    top: 20vh;
 }
+
 
 .image1:hover {
-    top 0;
+    top: 0;
 }
 
-
+.image2:hover {
+    bottom:0;
+}
 
 .img1 {
     grid-row: 1;
