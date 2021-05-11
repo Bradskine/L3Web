@@ -82,12 +82,12 @@
         <div class="img1 hov" class="grid"> <img class="img veiwImg image1"></div>
         <div class="img2 hov"> <img  class="img veiwImg image2"> </div>
         <div class="img3 hov"> <img class="img veiwImg image3"> </div>
-        <div class="img4 hov"> <img  class="img veiwImg image1"> </div>
+        <div class="img4 hov"> <img  class="img veiwImg image4"> </div>
 
-        <div class="cart1" onclick="addItem(['z',1 ])"> <img src="Img/add.png" class="img"></div>
-        <div class="cart2" onclick="addItem(['z',2 ])"> <img src="Img/add.png" class="img"> </div>
-        <div class="cart3" onclick="addItem(['z',3 ])"> <img src="Img/add.png" class="img"> </div>
-        <div class="cart4" onclick="addItem(['z',4 ])"> <img src="Img/add.png" class="img"> </div>
+        <div class="cart1" onclick="addItem(['z',1 ])"> <img src="Img/add.png" class="img plus"></div>
+        <div class="cart2" onclick="addItem(['z',2 ])"> <img src="Img/add.png" class="img plus"> </div>
+        <div class="cart3" onclick="addItem(['z',3 ])"> <img src="Img/add.png" class="img plus"> </div>
+        <div class="cart4" onclick="addItem(['z',4 ])"> <img src="Img/add.png" class="img plus"> </div>
     </div>
 
 
@@ -224,43 +224,43 @@
             var a = cartItems[0].length / 2;
             a = cartItems[0].length / 2;
 
-            var remMargin = (a * 4.59) - 4.59 + 'vh';
+            var remMargin = (a * 3.095) - 3.095 + 'vh';
 
 
             if (a == 1) {
-                rem.style.height = '3vh';
+                rem.style.height = '2vh';
             } else if (a == 2) {
-                rem2.style.height = '3vh';
+                rem2.style.height = '2vh';
                 rem2.style.marginTop = remMargin;
             } else if (a == 3) {
-                rem3.style.height = '3vh';
+                rem3.style.height = '2vh';
                 rem3.style.marginTop = remMargin;
             } else if (a == 4) {
-                rem4.style.height = '3vh';
+                rem4.style.height = '2vh';
                 rem4.style.marginTop = remMargin;
             } else if (a == 5) {
-                rem5.style.height = '3vh';
+                rem5.style.height = '2vh';
                 rem5.style.marginTop = remMargin;
             } else if (a == 6) {
-                rem6.style.height = '3vh';
+                rem6.style.height = '2vh';
                 rem6.style.marginTop = remMargin;
             } else if (a == 7) {
-                rem7.style.height = '3vh';
+                rem7.style.height = '2vh';
                 rem7.style.marginTop = remMargin;
             } else if (a == 8) {
-                rem8.style.height = '3vh';
+                rem8.style.height = '2vh';
                 rem8.style.marginTop = remMargin;
             } else if (a == 9) {
-                rem9.style.height = '3vh';
+                rem9.style.height = '2vh';
                 rem9.style.marginTop = remMargin;
             } else if (a == 10) {
-                rem10.style.height = '3vh';
+                rem10.style.height = '2vh';
                 rem10.style.marginTop = remMargin;
             } else if (a == 11) {
-                rem11.style.height = '3vh';
+                rem11.style.height = '2vh';
                 rem11.style.marginTop = remMargin;
             } else if (a == 12) {
-                rem12.style.height = '3vh';
+                rem12.style.height = '2vh';
                 rem12.style.marginTop = remMargin;
             }
             cartFull();
@@ -351,7 +351,7 @@
                 }  
                 
                  remMargin = (i * 4.59) - 4.59 + 'vh';
-                b.style.height = '3vh';
+                b.style.height = '2vh';
                 b.style.marginTop = remMargin;
 
             }
@@ -507,11 +507,11 @@
     function item() {
         if (box1Active == false) {
             for (var i = 0; i < h1.length; i++) {
-                h1[i].style.fontSize = '4.6vh';
-                img[i].style.height = '4.6vh';
-                img[i].style.width = '4.6vh';
-                img[i + 4].style.height = '4.6vh';
-                img[i + 4].style.width = '4.6vh';
+                h1[i].style.fontSize = '4.6vw';
+                img[i].style.height = '4.6vw';
+                img[i].style.width = '4.6vw';
+                img[i + 4].style.height = '4.6vw';
+                img[i + 4].style.width = '4.6vw';
             }
         }
 

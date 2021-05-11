@@ -234,7 +234,6 @@ bold {
     margin: auto;
 }
 
-
 .remButton {
     width: 12vw;
     height: 12vw;
@@ -244,7 +243,9 @@ bold {
     border: 0.02vw solid red;
 }
 
-
+.remButton:hover {
+    border: 0.4vw solid white;
+}
 
 
 h10 {
@@ -327,10 +328,13 @@ h1 {
 .remove {
     /* delte cart items */
     background-color: white;
-    width: 3vh;
+    width: 2vh;
     height: 0vh;
 }
 
+.remove:hover {
+    border: 0.6vh solid red;
+}
 
 
 .button2 {
@@ -373,7 +377,7 @@ h1 {
 }
 
 .h2 {
-    font-size: 3vh;
+    font-size: 2vh;
     color: white;
     width: auto;
 }
@@ -428,22 +432,26 @@ h1 {
 
 
 
+/*
 .veiwImg:hover {
-    min-height: 38vh;
-    min-width: 40vh;
+    min-height: 70vw;
+    min-width: 70vw;
     position: absolute;
-    right: 0;
-    top: 20vh;
+   right: 0;
 }
 
 
 .image1:hover {
     top: 0;
 }
-
-.image2:hover {
-    bottom:0;
+.image2:hover, .image3:hover {
+        top: 25vh;
 }
+
+.image4:hover {
+    bottom: 10vh;
+}
+*/
 
 .img1 {
     grid-row: 1;
@@ -493,6 +501,10 @@ h1 {
     grid-column: 4;
     align-self: center;
 }
+
+.plus:hover { 
+    border: 0.3vh solid red;
+    }
 
 
 
