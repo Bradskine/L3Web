@@ -28,7 +28,7 @@ nav {
     grid-column: 1;
     grid-row: 1/4;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr 3fr auto;
+    grid-template-rows: 1fr 1fr 1fr 3fr  auto;
     background-color: rgb(255, 0, 0, 1);
     height: 100%;
     width: 3vw;
@@ -55,7 +55,7 @@ nav {
 }
 
 .wow:hover .ab {
-    font-size: 3vh;
+    font-size: 3vw;
     text-decoration: underline;
     text-decoration-color: black;
 }
@@ -65,19 +65,19 @@ nav {
  border-radius: 0.6vh;
     border: 0.3vh solid black;
     padding: 0.05vh 0.9vw;
-    
+
 }
 
 
 #navA {
     color: black;
-    -webkit-text-stroke: 0.14vh black;
+    -webkit-text-stroke: 0.14vw black;
     transition: -webkit-Text-Stroke 0.5s, color 0.5s, font-size 1s, text-decoration 4.5s;
 }
 
 #navA:hover {
     color: red;
-    -webkit-text-stroke: 0.14vh black;
+    -webkit-text-stroke: 0.14vw black;
     transition: -webkit-Text-Stroke 0.2s, color 0.2s, color 0.5s, font-size 1.2s, text-decoration 4.5s;
 }
 
@@ -109,7 +109,6 @@ nav {
 
 a {
     color: black;
-    font-size: 3vh;
 }
 
 img.logo {
@@ -329,12 +328,14 @@ h1 {
     /* delte cart items */
     background-color: white;
     width: 2vh;
-    height: 0vh;
+    height:0;
+    /* padding: 0.3vh; */
 }
 
-.remove:hover {
-    border: 0.6vh solid red;
-}
+/* .remove:hover {
+    padding: 0;
+    border: 0.3vh solid red;
+} */
 
 
 .button2 {
@@ -439,15 +440,12 @@ h1 {
     position: absolute;
    right: 0;
 }
-
-
 .image1:hover {
     top: 0;
 }
 .image2:hover, .image3:hover {
         top: 25vh;
 }
-
 .image4:hover {
     bottom: 10vh;
 }
@@ -502,7 +500,7 @@ h1 {
     align-self: center;
 }
 
-.plus:hover { 
+.plus:hover {
     border: 0.3vh solid red;
     }
 

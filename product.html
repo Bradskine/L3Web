@@ -17,7 +17,6 @@
          <a href="home.html" class="ab" id="navA">Home</a>
         <a href="product.html" class="ab pageOn"  id="navA">Products</a>
         <a href="media.html" class="ab" id="navA">Media</a>
-        <a href="hi.html" class="ab" id="navA">Extra</a>
         <img src="Img/logo.png" class="logo">
 
         <img src="Img/grey.png" class='grey'>
@@ -53,7 +52,6 @@
                 <button class="button2" onclick="re('3c')"><img src="Img/minus.png" class="remove" id="rem3"></button>
                 <button class="button2" onclick="re('4d')"> <img src="Img/minus.png" class="remove" id="rem4"></button>
                 <button class="button2" onclick="re('5e')"> <img src="Img/minus.png" class="remove" id="rem5"></button>
-                <button class="button2" onclick="re('5e')"> <img src="Img/minus.png" class="remove" id="rem5"></button>
                 <button class="button2" onclick="re('6f')"> <img src="Img/minus.png" class="remove" id="rem6"></button>
                 <button class="button2" onclick="re('7g')"> <img src="Img/minus.png" class="remove" id="rem7"></button>
                 <button class="button2" onclick="re('8h')"> <img src="Img/minus.png" class="remove" id="rem8"></button>
@@ -63,9 +61,9 @@
                 <button class="button2" onclick="re('12l')"> <img src="Img/minus.png" class="remove" id="rem12"></button>
 
                 <div class="cartBottom" id="botCart">
-               <button class="remButton" onclick="clearCart()"><img src="Img/trash.png" class="clearImg"></button> 
+               <button class="remButton" onclick="clearCart()"><img src="Img/trash.png" class="clearImg"></button>
                 <h10 id='ttlCost'>TotalCost</h10>
-               </div> 
+               </div>
             </div>
 
         </div>
@@ -93,7 +91,7 @@
 
 </body>
 
-    
+
 <footer>
     <img src="Img/kayak2.png" class="bigKayak">
 <h22>@Bradskine the god of kayaks</h22>
@@ -119,7 +117,7 @@
     var cartItems = [
         [], // item type eg kayak bike or bottle
         [], //item number
-        [], //item count  
+        [], //item count
         [] //cost
     ];
     var itemType = '';
@@ -138,7 +136,7 @@
     var bottleCost = '$0.5';
     var cartEmpty = true;
 
-   window.onload = function() { 
+   window.onload = function() {
 
       kaks();
       item();
@@ -167,34 +165,34 @@
                 var idid = parseFloat(cartItems[2][i - 1]) + 1;
                 cartItems[2][i - 1] = idid;
                 h2Three.innerHTML = cartItems[2].join('');
-                
-                
+
+
                 //1st the substing removes the 1st symbal which is $
                 //then the parseFloat remves letter at end which in this case is k
             var a = parseFloat(cartItems[3][i-1].substring(1));
-               
+
               var b = parseFloat(cost.substring(1)); //this removes $ and k from cost
-            
+
               d = a+b;   //adds the amount of 1 of item to total cost of that item
                 var c = '$' + d + 'k';    //adds the $ and k back to number
                     cartItems[3][i-1] = c;
                 hZ.innerHTML = cartItems[3].join('');
-                
-                i = 0;   
+
+                i = 0;
             }
-          
+
 
         }
-        
+
         if (pass == true) {
 
             cartItems[0].push(itemType);
             cartItems[1].push(nu);
             cartItems[2].push(cartCount);
-     
+
             //just nneed to create varaibales for pricee ladi da
-            
-            
+
+
             if(itemType == ' bottle') {
                 cost = bottleCost;
             }   else if (itemType == ' kayak') {
@@ -202,7 +200,7 @@
             }   else if (itemType == ' bike') {
                 cost = bikeCost;
             }
-        
+
           cartItems[3].push(cost);
 
 
@@ -264,16 +262,16 @@
                 rem12.style.marginTop = remMargin;
             }
             cartFull();
-            
+
     }
          updateTotal();
     }  //end of additem()
 
     function re(x) {
-        var cnt = parseFloat(x) *2 -2; 
-        var remCnt = parseFloat(x);
-        
-        
+        var cnt = parseFloat(x) *2 -2;  ///0 2 4 6 8
+        var remCnt = parseFloat(x);    //12345
+
+
         if(cartItems[2][cnt] > 1) {
             var newCartItem = (cartItems[2][cnt]) - 1;
             var newCartCost = Number(parseFloat(cartItems[3][cnt].substring(1)));
@@ -281,139 +279,142 @@
             newCartCost -= itmCost;
              var updatedCost = '$' + newCartCost + 'k';
             cartItems[3][cnt] = updatedCost;
-            
+
             hZ.innerHTML = cartItems[3].join('');
-            
-            
-            
+
+
+
             cartItems[2][cnt] = newCartItem;
-            
+
             h2Three.innerHTML = cartItems[2].join('');
-            
+
         }    else {
-           
+
             cartItems[2][cnt] = '';
             cartItems[2][cnt+1] = '';
-            
-            
-            
-            
+
+
+
+
              h2Three.innerHTML = cartItems[2].join('');
-             
+
             cartItems[0][cnt] = '';
             cartItems[0][cnt+1] = '';
             h2.innerHTML = cartItems[0].join('');
-    
+
             cartItems[1][cnt] = '';
             cartItems[1][cnt+1] = '';
             h2Right.innerHTML = cartItems[1].join('');
-    
-            
-            
+
+
+
              cartItems[3][cnt] = '';
             cartItems[3][cnt+1] = '';
             hZ.innerHTML = cartItems[3].join('');
-    
-            
-            
-            
-            
-            
+
+
+
+
+
+
             cartItems[0] = cartItems[0].filter(word => word != '');
             cartItems[1] = cartItems[1].filter(word => word != '');
             cartItems[2] = cartItems[2].filter(word => word != '');
             cartItems[3] = cartItems[3].filter(word => word != '');
-            
-      
-            for (i=1; i<=12; i++) {
 
-                    if (i==1) {
-                    var b = eval('rem');
-                    }  else {
-                     b = eval('rem' + i);       
-                }
-                
-                b.style.height = 0;
-                b.style.marginTop = 0;
-            }
-   
-  var a = cartItems[0].length / 2;
+
+            for (i=1; i<=12; i++) {
+              if (i==1) {
+              var b = eval('rem');
+              }  else {
+               b = eval('rem' + i);
+          }
+          console.log(b);
+              b.style.height = '0';
+              b.style.marginTop = '0';
+      }
+
+
+
+
+         var a = cartItems[0].length / 2;
             a = cartItems[0].length / 2;
 
             var remMargin = '';
 
-            
+console.log(a);
             for (i=a; i>0; i--) {
                 if (i==1) {
-                    var b = eval('rem');
+                    var c = eval('rem');
                     }  else {
-                     b = eval('rem' + i);       
-                }  
-                
-                 remMargin = (i * 4.59) - 4.59 + 'vh';
-                b.style.height = '2vh';
-                b.style.marginTop = remMargin;
+                     c = eval('rem' + i);
+                }
+
+                 remMargin = (i * 3.095) - 3.095 + 'vh';
+                c.style.height = '2vh';
+                c.style.marginTop = remMargin;
+
 
             }
-   
+
         }   //end or remove fucntion re(x)
-    
+
         updateTotal();
         if(cartItems[1].length == 0) {
             emptyCart();
         }
-        
-        
-           
-        
+
+
+
+
     }
-            
+
     function emptyCart() {
         cartEmpty = true;
-             botCart.style.display = 'none';    
+             botCart.style.display = 'none';
                     h2.innerHTML = '<bold>'+'Empty'+'</bold>';
-        
+
     }
     function cartFull() {
         cartEmpty = false;
         botCart.style.display = 'grid';
     }
-    
-    
-        
+
+
+
 
     function updateTotal() {
-        
-    
-        
-        
-        
+
+
+
+
+
         var b =0;
             for (var i=cartItems[1].length/2;i>0;i--) {
 
-                
+
              var a = Number(parseFloat(cartItems[3][i*2-2].substring(1)));
-                
+
            b += a;
 //
-                
-                
+
+
 
             }
         var c = '$' + b + 'k';
 
-    
+
         ttlCost.innerHTML = c;
-                
+
         }
-        
-    
-    
+
+
+
     function clearCart() {
-    
+
            for(var i=1;i<5;i++) {
-              
-                
+
+
                   cartItems[i-1] =  cartItems.splice() ;
 
            }
@@ -426,22 +427,22 @@
             h2Three.innerHTML = cartItems[2];
             hZ.innerHTML =cartItems[3];
            ttlCost.innerHTML='';
-        
+
                   for (i=1; i<=12; i++) {
                     if (i==1) {
                     var b = eval('rem');
                     }  else {
-                     b = eval('rem' + i);       
+                     b = eval('rem' + i);
                 }
                     b.style.height = 0;
                     b.style.marginTop = 0;
             }
         emptyCart();
     }
-    
-   
-    
-  
+
+
+
+
     var kText = [
         'Kayak1',
         'Kayak2',
