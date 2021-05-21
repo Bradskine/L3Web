@@ -1,35 +1,37 @@
 <!doctype html>
 
-<html lan="en">
+<html lang="en">
 
 <head>
+    <meta charset="utf-8"/>
     <title>product</title>
     <link rel="stylesheet" href="style.css">
 
 
 </head>
-<meta name="viewport" content="width=device-width" charset="utf-8" />
+
 
 
 <body>
-  <button class="back" onclick="history.back()"> back</button>
-    <nav class="wow">
 
-         <a href="home.html" class="ab" id="navA">Home</a>
-        <a href="product.html" class="ab pageOn"  id="navA">Products</a>
-        <a href="media.html" class="ab" id="navA">Media</a>
-        <img src="Img/logo.png" class="logo">
+    <nav class="wow">   <!--this is my side nav that is hover-->
 
-        <img src="Img/grey.png" class='grey'>
+         <a href="home.html" class="ab navA">Home</a>
+        <a href="product.html" class="ab pageOn navA">Products</a>
+        <a href="media.html" class="ab navA">Media</a>
+        <img alt="logo" src="Img/logo.png" class="logo">
+
+        <img alt="sideBar" src="Img/grey.png" class='grey'>
 
     </nav>
 
 
 
-    <section class="header">
+    <section class="header">   <!-- this is the bar acros top of the scree whcih has
+    to dropdown menus including shopping cart and item selection menu -->
 
 
-        <div class="dropDown dropDown1">
+        <div class="dropDown dropDown1"> <!--  this is the itemMeun dropdown with muitiple onclick text-->
             <button class="but1" id="b1" onclick='reset()'>items</button>
             <div class="itemMenu" id="itemsMenu">
                 <h3 onclick="kaks(); item()" class="h3">Kayaks</h3>
@@ -38,8 +40,8 @@
             </div>
         </div>
 
-        <div class="dropDown shoppingCart" id="abc">
-            <img src="Img/sCart.png" class="sCart">
+        <div class="dropDown shoppingCart" id="abc">  <!-- this is the shopping cart dropdown hover -->
+            <img alt="shoppingcart" src="Img/sCart.png" class="sCart">
             <div class="itemMenu2" id="itemsMenu">
 
                 <h2 class="h2 price" id="hZ" ></h2>
@@ -48,21 +50,21 @@
                 <h2 class="h2 count" id="hTo"> </h2>
 <!--              <img src="Img/minus.png">-->
 
-                <button class="button2" onclick="re('1a')"><img src="Img/minus.png" class="remove" id="rem"></button>
-                <button class="button2" onclick="re('2b')"><img src="Img/minus.png" class="remove" id="rem2"></button>
-                <button class="button2" onclick="re('3c')"><img src="Img/minus.png" class="remove" id="rem3"></button>
-                <button class="button2" onclick="re('4d')"> <img src="Img/minus.png" class="remove" id="rem4"></button>
-                <button class="button2" onclick="re('5e')"> <img src="Img/minus.png" class="remove" id="rem5"></button>
-                <button class="button2" onclick="re('6f')"> <img src="Img/minus.png" class="remove" id="rem6"></button>
-                <button class="button2" onclick="re('7g')"> <img src="Img/minus.png" class="remove" id="rem7"></button>
-                <button class="button2" onclick="re('8h')"> <img src="Img/minus.png" class="remove" id="rem8"></button>
-                <button class="button2" onclick="re('9i')"><img src="Img/minus.png" class="remove" id="rem9"></button>
-                <button class="button2" onclick="re('10j')"> <img src="Img/minus.png" class="remove" id="rem10"></button>
-                <button class="button2" onclick="re('11k')"> <img src="Img/minus.png" class="remove" id="rem11"></button>
-                <button class="button2" onclick="re('12l')"> <img src="Img/minus.png" class="remove" id="rem12"></button>
+                <button class="button2" onclick="re('1a')"><img alt="button" src="Img/minus.png" class="remove" id="rem"></button>  <!-- these the minus buttons to take out items of cart-->
+                <button class="button2" onclick="re('2b')"><img alt="button" src="Img/minus.png" class="remove" id="rem2"></button>
+                <button class="button2" onclick="re('3c')"><img alt="button" src="Img/minus.png" class="remove" id="rem3"></button>
+                <button class="button2" onclick="re('4d')"> <img alt="button" src="Img/minus.png" class="remove" id="rem4"></button>
+                <button class="button2" onclick="re('5e')"> <img alt="button" src="Img/minus.png" class="remove" id="rem5"></button>
+                <button class="button2" onclick="re('6f')"> <img alt="button" src="Img/minus.png" class="remove" id="rem6"></button>
+                <button class="button2" onclick="re('7g')"> <img alt="button" src="Img/minus.png" class="remove" id="rem7"></button>
+                <button class="button2" onclick="re('8h')"> <img alt="button" src="Img/minus.png" class="remove" id="rem8"></button>
+                <button class="button2" onclick="re('9i')"><img alt="button" src="Img/minus.png" class="remove" id="rem9"></button>
+                <button class="button2" onclick="re('10j')"> <img alt="button" src="Img/minus.png" class="remove" id="rem10"></button>
+                <button class="button2" onclick="re('11k')"> <img alt="button" src="Img/minus.png" class="remove" id="rem11"></button>
+                <button class="button2" onclick="re('12l')"> <img alt="button" src="Img/minus.png" class="remove" id="rem12"></button>
 
-                <div class="cartBottom" id="botCart">
-               <button class="remButton" onclick="clearCart()"><img src="Img/trash.png" class="clearImg"></button>
+                <div class="cartBottom" id="botCart"> <!-- grid to disbplay bottom of grid which has button that clears entire cart and total cost-->
+               <button class="remButton" onclick="clearCart()"><img alt="trash" src="Img/trash.png" class="clearImg"></button>
                 <h10 id='ttlCost'>TotalCost</h10>
                </div>
             </div>
@@ -71,21 +73,21 @@
 
     </section>
 
-    <div class="box" id="box1">
-        <h1 class="h1">thing</h1>
-        <h1 class="h1">ohter thinkg</h1>
-        <h1 class="h1">diffirent think</h1>
-        <h1 class="h1">not the same thing</h1>
+    <div class="box" id="box1">  <!-- this the main product page box with items to buy-->
+        <h1 class="h1 center">thing</h1>
+        <h1 class="h1 center">ohter thinkg</h1>
+        <h1 class="h1 center">diffirent think</h1>
+        <h1 class="h1 center">not the same thing</h1>
 
-        <div class="img1 hov" class="grid"> <img class="img veiwImg image1"></div>
-        <div class="img2 hov"> <img  class="img veiwImg image2"> </div>
-        <div class="img3 hov"> <img class="img veiwImg image3"> </div>
-        <div class="img4 hov"> <img  class="img veiwImg image4"> </div>
+        <div class="img1 hov center" class="grid"> <img alt="image1" class="img veiwImg image1"></div>
+        <div class="img2 hov center"> <img  alt="image2" class="img veiwImg image2"> </div>
+        <div class="img3 hov center"> <img alt="item3" class="img veiwImg image3"> </div>
+        <div class="img4 hov center"> <img  alt="item4" class="img veiwImg image4"> </div>
 
-        <div class="cart1" onclick="addItem(['z',1 ])"> <img src="Img/add.png" class="img plus"></div>
-        <div class="cart2" onclick="addItem(['z',2 ])"> <img src="Img/add.png" class="img plus"> </div>
-        <div class="cart3" onclick="addItem(['z',3 ])"> <img src="Img/add.png" class="img plus"> </div>
-        <div class="cart4" onclick="addItem(['z',4 ])"> <img src="Img/add.png" class="img plus"> </div>
+        <div class="cart1 center" onclick="addItem(['z',1 ])"> <img alt="add" src="Img/add.png" class="img plus"></div>
+        <div class="cart2 center" onclick="addItem(['z',2 ])"> <img  alt="add" src="Img/add.png" class="img plus"> </div>
+        <div class="cart3 center" onclick="addItem(['z',3 ])"> <img alt="add" src="Img/add.png" class="img plus"> </div>
+        <div class="cart4 center" onclick="addItem(['z',4 ])"> <img alt="add" src="Img/add.png" class="img plus"> </div>
     </div>
 
 
@@ -93,7 +95,7 @@
 
 
 <footer>
-    <img src="Img/kayak2.png" class="bigKayak">
+    <img alt="bigKayak" src="Img/kayak2.png" class="bigKayak">  <!--footter at bottom with image and copywrite-->
 <h22>@Bradskine the god of kayaks</h22>
 </footer>
 

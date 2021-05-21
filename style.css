@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&family=Poppins:wght@500&display=swap');
 
-/*font-family: 'Kiwi Maru', serif;*/
-/*font-family: 'Poppins', sans-serif;*/
 html {
-    background-color: rgb(40, 40, 40);
-    font-family: 'Poppins', sans-serif;
+    background-color: rgb(40, 40, 40);  /* background colour*/
+    font-family: 'Poppins', sans-serif;   /* sets enteri page to main font as headers are changed to other font later */
 }
 
 
-* {
+* {  /* removes defaut browerser margins and padding*/
     margin: 0;
     padding: 0;
 }
 
 
-body {
+body {  /* seets grid for most of page exept fotter*/
     display: grid;
     grid-template-rows: 15vh 60vh 25vh;
     grid-template-columns: auto 8fr;
@@ -24,7 +22,7 @@ body {
     overflow: hidden;
 }
 
-nav {
+nav {  /*creatres grid for nav and changes height and backgorund colour */
     grid-column: 1;
     grid-row: 1/4;
     display: grid;
@@ -35,33 +33,33 @@ nav {
     align-items: center;
     justify-items: center;
     overflow: hidden;
-    transition: width 0.47s;
+    transition: width 0.47s;  /*so it doesnt instnat pop out when hover to make look smoohter */
 }
 
 
-.logo {
+.logo {  /* logo height is 0 before nav is hovered/activated*/
     height: 0;
 
 }
 
-.wow:hover {
+.wow:hover {  /*hover image width that is in forn of nav */
     width: 20vw;
 }
 
 
-.ab {
+.ab {  /*these are nav a links */
     font-size: 0;
     text-decoration-color: red;
 }
 
-.wow:hover .ab {
+.wow:hover .ab { /* changes nav a links when side nav is hovered/ acitvated*/
     font-size: 3vw;
     text-decoration: underline;
     text-decoration-color: black;
 }
 
 
-.pageOn {
+.pageOn { /* adds a backgorund ot the page */
  border-radius: 0.6vh;
     border: 0.3vh solid black;
     padding: 0.05vh 0.9vw;
@@ -69,13 +67,13 @@ nav {
 }
 
 
-#navA {
+.navA {  /*nav a text */
     color: black;
     -webkit-text-stroke: 0.14vw black;
     transition: -webkit-Text-Stroke 0.5s, color 0.5s, font-size 1s, text-decoration 4.5s;
 }
 
-#navA:hover {
+.navA:hover {  /*nav a text when hovered apon */
     color: red;
     -webkit-text-stroke: 0.14vw black;
     transition: -webkit-Text-Stroke 0.2s, color 0.2s, color 0.5s, font-size 1.2s, text-decoration 4.5s;
@@ -83,13 +81,13 @@ nav {
 
 
 
-.wow:hover .logo {
+.wow:hover .logo { /*makes logo show when nav is acitvated/hovered on */
     width: 8vh;
     height: 8vh;
     transition: height 1.2s;
 }
 
-.wow:hover .grey {
+.wow:hover .grey {/* makes hoever bar nothing when nav is up*/
     width: 0;
     height: 0;
     transition: width 1s, height 500s;
@@ -97,7 +95,7 @@ nav {
 }
 
 
-.grey {
+.grey {  /*sets values for hover bar  */
     width: 5vw;
     height: 100vh;
     position: absolute;
@@ -105,18 +103,7 @@ nav {
     transition: width 1s;
 }
 
-
-
-a {
-    color: black;
-}
-
-img.logo {
-    width: 8vh;
-
-}
-
-h4 {
+h4 {  /* media page header text alinment size and colour and border*/
     grid-row: 1;
     grid-column: 1/ span 2;
     text-align: center;
@@ -130,7 +117,7 @@ h4 {
 }
 
 
-.p {
+.p{ /* media paragraph text aliment size and colour*/
     align-self: baseline;
     grid-column: 1 / span2;
     width: 75vw;
@@ -142,7 +129,8 @@ h4 {
     text-decoration: none;
 }
 
-.link {
+.link {  /*media links athsetics */
+
     text-decoration: underline;
     text-decoration-color: white;
     color: white;
@@ -150,7 +138,7 @@ h4 {
     transition: -webkit-Text-Stroke 1.2s, color 1.6s, text-decoration-color 1.2s;
 }
 
-.link:hover {
+.link:hover { /* hover for media links*/
     /*    color: grey;*/
     color: black;
     text-decoration-color: grey;
@@ -159,7 +147,7 @@ h4 {
 }
 
 /*need to change font sizes in cart*/
-.header {
+.header {  /* spacing and alinment for header at top of screen with 2 dropdwons menus*/
     display: grid;
     grid-template-columns: 15fr 13fr;
     grid-template-rows: 10vh;
@@ -167,7 +155,7 @@ h4 {
     margin-left: 2vw;
 }
 
-.but1 {
+.but1 {  /* this is the itemmenu hover text*/
     border: none;
     grid-column: 4;
     background: none;
@@ -185,7 +173,7 @@ h4 {
 }
 
 
-.but1:hover {
+.but1:hover { /* items text hover*/
     font-size: 5vh;
     color: black;
     background-color: red;
@@ -193,20 +181,20 @@ h4 {
 
 }
 
-bold {
+bold {  /*custom bold size */
     font-size: 3vw;
     color: white;
 
 }
 
-.dropDown:hover .but1 {
+.dropDown:hover .but1 { /*item dropdow menu  */
 
     color: black;
     background-color: red;
     border: 0.3vh solid black;
-
 }
 
+/*rest of styles should be self explanatary*/
 .dropDown1 {
     grid-column: 1;
 }
@@ -214,7 +202,7 @@ bold {
 .dropDown {
     text-align: center;
     position: relative;
-    display: inline-block;
+    display: block;
     height: 3vh;
     width: auto;
 }
@@ -233,12 +221,13 @@ bold {
     margin: auto;
 }
 
-.remButton {
+.remButton {    /*item remove button*/
     width: 12vw;
     height: 12vw;
     background: none;
     padding: none;
     margin: none;
+    border-radius: 1vh;
     border: 0.02vw solid red;
 }
 
@@ -270,7 +259,7 @@ h10 {
     grid-template-columns: 0 auto auto auto 10fr;
     grid-column-gap: 1vw;
     grid-template-rows: repeat(4, 1fr);
-    grid-row-gap: 3.1415927vh;
+    /* grid-row-gap: 3.1415927vh; */
 }
 
 
@@ -285,7 +274,7 @@ h1 {
 }
 
 
-.itemMenu {
+.itemMenu {  /*this is the menu to seclet what item page */
     display: none;
     z-index: 1;
     /*    position: absolute;*/
@@ -299,7 +288,7 @@ h1 {
     width: auto;
 }
 
-.itemMenu2 {
+.itemMenu2 {  /*this is the items with names and Images */
     display: none;
     z-index: 1;
     width: 100%;
@@ -313,12 +302,10 @@ h1 {
 
 
 
-.count {
+.count {  /* shoping cart item count*/
     grid-column: 4;
     grid-row: 1;
 }
-
-
 
 .number2 {
     grid-row: 2;
@@ -327,19 +314,21 @@ h1 {
 .remove {
     /* delte cart items */
     background-color: white;
-    width: 2vh;
+    border-radius: 0.5vh;
+    height: 3vh;
+    width: 3vh;
     height:0;
-    /* padding: 0.3vh; */
 }
 
-/* .remove:hover {
-    padding: 0;
-    border: 0.3vh solid red;
-} */
+ .remove:hover {
+  background-color: black;
+
+}
 
 
 .button2 {
     height: 0;
+    align-items: center;
     width: 0;
     border: none;
     grid-column: 5;
@@ -378,7 +367,7 @@ h1 {
 }
 
 .h2 {
-    font-size: 2vh;
+    font-size: 2.5vh;
     color: white;
     width: auto;
 }
@@ -421,9 +410,6 @@ h1 {
 }
 
 
-
-
-
 .img {
     width: 0;
     height: 0;
@@ -431,25 +417,6 @@ h1 {
 
 }
 
-
-
-/*
-.veiwImg:hover {
-    min-height: 70vw;
-    min-width: 70vw;
-    position: absolute;
-   right: 0;
-}
-.image1:hover {
-    top: 0;
-}
-.image2:hover, .image3:hover {
-        top: 25vh;
-}
-.image4:hover {
-    bottom: 10vh;
-}
-*/
 
 .img1 {
     grid-row: 1;
@@ -499,12 +466,16 @@ h1 {
     grid-column: 4;
     align-self: center;
 }
+.plus {
+ border: 0.3vh solid rgb(40,40,40); /*matchs backround and prevents size changing */
 
+ border-radius: 0.7vh; /* rounds corners to make look nice */
+  transition: border 0.2s;makes feel smoother
+}
 .plus:hover {
+
     border: 0.3vh solid red;
     }
-
-
 
 footer {
     display: grid;
@@ -526,31 +497,31 @@ h22 {
     text-shadow: 0.1vh 0.1vh 0.9vh white;
 }
 
-
+.center {
+  align-content: center;
+  align-self: center;
+}
 
 .bigKayak {
 
-    height: 30vh;
+    height: 25vh;
     justify-self: center;
 
     left: 30vw;
     right: 30vw;
-}
+} /*img at bottom of screen*/
 
 
 @media only screen and (min-width: 600px) {
-  .back {
-    display: none;
-  }
+    .bigKayak {
+      height: 24vh;
+    }
 }
 
 
 @media only screen and (max-width: 600px) {
-  .back {
-    display: block;
-    width: 10vw;
-    position: absolute;
-    left: 6vw;
-    top: 0.4vh;
-  }
+.bigKayak {
+  height: 15vh;
+}
+
 }
