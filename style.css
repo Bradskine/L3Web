@@ -225,8 +225,8 @@ bold {  /*custom bold size */
     width: 12vw;
     height: 12vw;
     background: none;
-    padding: none;
-    margin: none;
+    padding: 0;
+    margin: 0;
     border-radius: 1vh;
     border: 0.02vw solid red;
 }
@@ -236,7 +236,7 @@ bold {  /*custom bold size */
 }
 
 
-h10 {
+.h10 {
     color: white;
     font-size: 3vh;
     grid-row: 1;
@@ -247,8 +247,6 @@ h10 {
 .cartBottom {
     display: grid;
     grid-column: 1/ span end;
-    grid-template-rows: 1;
-    grid-template-columns: 2;
 }
 
 .box {
@@ -470,7 +468,7 @@ h1 {
  border: 0.3vh solid rgb(40,40,40); /*matchs backround and prevents size changing */
 
  border-radius: 0.7vh; /* rounds corners to make look nice */
-  transition: border 0.2s;makes feel smoother
+  transition: border 0.2s;/*makes feel smoother*/
 }
 .plus:hover {
 
@@ -482,13 +480,10 @@ footer {
 
     position: absolute;
     bottom: 1vh;
-
-    grid-template-rows: 2;
-    grid-template-columns: 1;
 }
 
 
-h22 {
+.h22 {
     font-size: 3vh;
     width: 100vw;
     text-align: center;

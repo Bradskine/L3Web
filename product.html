@@ -33,7 +33,7 @@
 
         <div class="dropDown dropDown1"> <!--  this is the itemMeun dropdown with muitiple onclick text-->
             <button class="but1" id="b1" onclick='reset()'>items</button>
-            <div class="itemMenu" id="itemsMenu">
+            <div class="itemMenu">
                 <h3 onclick="kaks(); item()" class="h3">Kayaks</h3>
                 <h3 onclick="bikes(); item()" class="h3">bikes</h3>
                 <h3 onclick="bots(); item()" class="h3">drinkBottles</h3>
@@ -42,12 +42,12 @@
 
         <div class="dropDown shoppingCart" id="abc">  <!-- this is the shopping cart dropdown hover -->
             <img alt="shoppingcart" src="Img/sCart.png" class="sCart">
-            <div class="itemMenu2" id="itemsMenu">
+            <div class="itemMenu2" >
 
-                <h2 class="h2 price" id="hZ" ></h2>
-                <h2 class="h2 left" id="hTwo"> </h2>
-                <h2 class="h2 right" id="hToo"> </h2>
-                <h2 class="h2 count" id="hTo"> </h2>
+                <h2 class="h2 price" id="hZ" >fieldsetf</h2>
+                <h2 class="h2 left" id="hTwo">f </h2>
+                <h2 class="h2 right" id="hToo">f </h2>
+                <h2 class="h2 count" id="hTo"> f</h2>
 <!--              <img src="Img/minus.png">-->
 
                 <button class="button2" onclick="re('1a')"><img alt="button" src="Img/minus.png" class="remove" id="rem"></button>  <!-- these the minus buttons to take out items of cart-->
@@ -65,11 +65,12 @@
 
                 <div class="cartBottom" id="botCart"> <!-- grid to disbplay bottom of grid which has button that clears entire cart and total cost-->
                <button class="remButton" onclick="clearCart()"><img alt="trash" src="Img/trash.png" class="clearImg"></button>
-                <h10 id='ttlCost'>TotalCost</h10>
+                <div class="h10" id='ttlCost'>TotalCost</div>
+
+                </div>
                </div>
             </div>
 
-        </div>
 
     </section>
 
@@ -79,10 +80,10 @@
         <h1 class="h1 center">diffirent think</h1>
         <h1 class="h1 center">not the same thing</h1>
 
-        <div class="img1 hov center" class="grid"> <img alt="image1" class="img veiwImg image1"></div>
-        <div class="img2 hov center"> <img  alt="image2" class="img veiwImg image2"> </div>
-        <div class="img3 hov center"> <img alt="item3" class="img veiwImg image3"> </div>
-        <div class="img4 hov center"> <img  alt="item4" class="img veiwImg image4"> </div>
+        <div class="img1 hov center" > <img  src = 'hi' alt="image1" class="img veiwImg image1"></div>
+        <div class="img2 hov center"> <img  src = 'hi' alt="image2" class="img veiwImg image2"> </div>
+        <div class="img3 hov center"> <img  src = 'hi' alt="item3" class="img veiwImg image3"> </div>
+        <div class="img4 hov center"> <img  src = 'hi'  alt="item4" class="img veiwImg image4"> </div>
 
         <div class="cart1 center" onclick="addItem(['z',1 ])"> <img alt="add" src="Img/add.png" class="img plus"></div>
         <div class="cart2 center" onclick="addItem(['z',2 ])"> <img  alt="add" src="Img/add.png" class="img plus"> </div>
@@ -96,10 +97,10 @@
 
 <footer>
     <img alt="bigKayak" src="Img/kayak2.png" class="bigKayak">  <!--footter at bottom with image and copywrite-->
-<h22>@Bradskine the god of kayaks</h22>
+<div class="h22">@Bradskine the god of kayaks</div>
 </footer>
 
-
+<script src="productJ.js"></script>
 </html>
- <script src="productJ.js"></script>
+
 <!-- append To the sky of the god-->
